@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwoSuITuEldNJhrM8eTfyS-GYMoNbt-P5Dg&usqp=CAU" />
+
+    <script src="./js/main.js"></script>
+    <title>Kanban List (Project List)</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<body>
+    <!-- Navigation Top -->
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img alt="logo" class="go-logo-k" src="img\Lockated_Logo.png" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./1CF_Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./31Dashboard_Daily.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./31Dashboard_Daily.html">Setup</a>
+                    </li>
+                </ul>
+                <div class="top-nav-right">
+                    <div class="d-flex search-input">
+                        <span class="material-symbols-outlined"> search </span>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            1201/D Jyoti Tower
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>1346/F Hayat Tower</li>
+                            <li>9876/A JP Morgan Tower</li>
+                            <li>Busan Rcidency</li>
+                        </ul>
+                    </div>
+                    <span class="material-symbols-outlined"> apps </span>
+                    <div class="avatar" type="button" data-bs-toggle="modal" data-bs-target="#userInfo">
+                        <div class="avatar__letters">A</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation above -->
+
+    <!-- sidebar start below -->
+    <div class="sidebar sidebar_inner" id="mySidebar">
+        <p class="closebtn">
+            <span class="material-symbols-outlined cancel" onclick="closeNav()">
+                cancel
+            </span>
+        </p>
+        <ul class="p-0">
+            <!--  button for closing sidebar-->
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Asset</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Audit</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Service</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Tickets</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">AMC</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Customers</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Vendor</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span class="text">Permit
+                        to Work</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Inventory</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">MoM</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group2">
+                    <a class="text nav-link dropdown-toggle asset-after" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img alt="" src="img\Agreements.png" /><span class="text">Task Management</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Setup</a></li>
+                        <li><a href="#">Incidents</a></li>
+                        <li><a href="#">Design Inputs</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Setup</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- sidebar ends above -->
+
+    <!-- webpage conteaint start -->
+    <div class="website-content">
+        <!-- module top navigation  -->
+        <div class="module-data-section mt-2 mb-3">
+            <div class="container-sm d-flex justify-content-between pe-4 list-top">
+                <p class="topflex-p">Project</p>
+                <p class="topflex-p" id="topflex-p-child">Maintainance</p>
+                <p class="topflex-p">Finance</p>
+                <p class="topflex-p">CRM</p>
+                <p class="topflex-p">Utility</p>
+                <p class="topflex-p">Visitors</p>
+                <p class="topflex-p">Experience</p>
+                <p class="topflex-p">Property</p>
+            </div>
+            <div class="ms-1">
+                <div class="p-1">
+                      <div class="d-flex"><span class="pe-2"><img src="img/Globe.svg" alt=""></span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle fs-5" style="font-weight: 500;" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Project 1
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal3">Edit Project</a></li>
+                                <li><a class="dropdown-item" href="#" id="copyLink">Copy Project Link</a></li>
+                                <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#deleteProjectModal">Delete Project</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-sm d-flex justify-content-start pe-4 border-bottom-main list-top project-div"
+                    style="padding-left: 33px; max-width: 1665px;">
+                    <a href="Project-Detail-Page.html"><p class="topflex-p2 ps-3">Overview</p></a>
+                    <p class="topflex-p2">List</p>
+                    <p class="topflex-p2" id="topflex-p-child2">Kanban</p>
+                    <p class="topflex-p2">Dashboard</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between pe-4 p-2 pt-2 border-bottom">
+                <div class="d-flex">
+                    <!-- <h5 class="me-2 mt-2">Tasks</h5> -->
+                    <div class="me-2"> <a href="my_calendar.html"><button type="button" class=" go-shadow-k"
+                                id="my-calander"><span class="pe-2"><img src="img/mycalOrg.svg" style="margin-bottom: 3px;"
+                                        alt="plus"></span>My
+                                Calender</button></a></div>
+                    <div class="me-2"> <button type="button" class=" go-shadow-k" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" id="focus-btn"><span class="pe-2"><img src="img/focusOrg.svg"
+                                    style="margin-bottom: 3px;" alt="plus"></span>Focus</button></div>
+                    <div class="me-2"> <button button type="button" class=" go-shadow-k" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2" id="add-project-btn21"><img id="funnel-sm"
+                                src="img/funelOrg.svg" alt="funnel"></button>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="me-2"> <button style="width: 105px;" type="button" class=" go-shadow-k"
+                            data-bs-toggle="modal" data-bs-target="#TaskModal" id="add-project-btn"><span
+                                class="pe-2"><img src="img/Plus.svg" style="margin-bottom: 3px;" alt="plus"></span>Add
+                            Task</button></div>
+
+                </div>
+            </div>
+        </div>
+        <!-- cards start -->
+        <div class="d-flex card-main ">
+            <div class="me-3 mb-3 go-shadow-k overflow-y-auto" style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #83D17A;">On Hold</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section" draggable="true">
+
+                    </div>
+                    <div class="card-body" >
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="me-3 mb-3  go-shadow-k overflow-y-auto" style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #E4636A;">Open</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section-main" draggable="true">
+                        <div class="d-flex justify-content-between">
+                            <div id="details-section-c1"> <img class="pb-1" src="img/Star.svg" alt=""> 100</div>
+                           <div><img id="details-section-c2" src="img/Calenda.svg" alt="">30 Nov</div>
+                        </div>
+                        <div id="details-section-main-child">
+                            <p class="mt-1 ms-1" style="width: 240px;">Design Task Management Web Screens</p>
+                            <p class="mt-2 ms-1">Project : <span class="orange-color">Project 1</span> </p>
+                            <p class="mt-2 ms-1">Assigned To : <span class="orange-color">Satyam M</span> </p>
+                            <div class="d-flex">
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex ">
+                                    <a href=""><div class="ps-1"><img src="img/Paperclip.svg" alt=""></div></a>
+                                    <a href=""><div class="ps-2"><img src="img/LinkSimple.svg" alt=""></div></a>
+                                    <a href=""><div class="ps-2"><img src="img/WarningDiamond.svg" alt=""></div></a>
+                                </div>
+                                <div>
+                                    <div class="orange-color">(<span class="text-dark">0</span>/1)</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card-body" >
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="me-3 mb-3  go-shadow-k overflow-y-auto" style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #E4636A;">Open</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section-main">
+                        <div class="d-flex justify-content-between">
+                            <div id="details-section-c1"> <img class="pb-1" src="img/Star.svg" alt=""> 101</div>
+                           <div><img id="details-section-c2" src="img/Calenda.svg" alt="">31 Nov</div>
+                        </div>
+                        <div id="details-section-main-child">
+                            <p class="mt-1 ms-1" style="width: 240px;">Web Screens</p>
+                            <p class="mt-2 ms-1">Project : <span class="orange-color">Project 2</span> </p>
+                            <p class="mt-2 ms-1">Assigned To : <span class="orange-color">Devesh J</span> </p>
+                            <div class="d-flex">
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                                <a href="task_details.html"><button class="details-section-btn">web pages</button></a>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex ">
+                                    <a href=""><div class="ps-1"><img src="img/Paperclip.svg" alt=""></div></a>
+                                    <a href=""><div class="ps-2"><img src="img/LinkSimple.svg" alt=""></div></a>
+                                    <a href=""><div class="ps-2"><img src="img/WarningDiamond.svg" alt=""></div></a>
+                                </div>
+                                <div>
+                                    <div class="orange-color">(<span class="text-dark">0</span>/2)</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card-body" >
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="me-3 mb-3  go-shadow-k overflow-y-auto"  style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #dfd7d7;">In Progress</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section">
+
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="me-3 mb-3  go-shadow-k overflow-y-auto" style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #83D17A;">Overdue</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section">
+
+                    </div>
+                    <div class="card-body" >
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="me-3 mb-3  go-shadow-k overflow-y-auto" style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #5F5F5F;">Completed</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section">
+
+                    </div>
+                    <div class="card-body" >
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="me-3 mb-3  go-shadow-k overflow-y-auto" style=" height: 700px;">
+                <div class="card border-0" style="width: 16rem;">
+                    <div class="card-body p-2 card-top">
+                        <div class="d-flex card-top-child1">
+                            <p class="pe-3 ps-2 text-dark">0</p>
+                            <p style="color: #FFD80C;">On Hold</p>
+                        </div>
+                        <div class="card-top-child2"><img src="img/Plus+.svg" alt=""></div>
+                    </div>
+                    <div class="p-2 details-section">
+
+                    </div>
+                    <div class="card-body" >
+                        <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cards end -->
+
+    <!--New Task modal start -->
+    <div class="modal fade" id="TaskModal" tabindex="-1" aria-labelledby="TaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mt-0 me-0 " style="height: 100vh;">
+            <div class="modal-content">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="exampleModalLabel">New Task</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-4">
+                            <div class="form-check ps-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label form-text-k" for="flexCheckDefault">
+                                    Special Initiative
+                                </label>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label for="owner" class="form-label form-text-k">Project</label>
+                                <select class="form-select select-font2" id="owner" required>
+                                    <option value="" disabled selected>Select a Project</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Priject 1</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Project 2</option>
+                                </select>
+                            </div>
+                    
+                            <div class="col-md-12 mt-2">
+                                <label for="projectTitle" class="form-label form-text-k">Task Title</label>
+                                <input placeholder="Enter title here" type="text" class="form-control" id="projectTitle"
+                                    required>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label for="comment" class="form-label form-text-k">Description</label>
+                                <textarea placeholder="Enter Description Here" class="form-control" id="comment"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label for="owner" class="form-label form-text-k">Assign To</label>
+                                <select class="form-select select-font2" id="owner" required>
+                                    <option value="" disabled selected>Select Responsible Person</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>person 1</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>person 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6" style="margin-top: 7px;">
+                                <label for="TaskDueDate" class="form-label form-text-k select-font2">Deadline</label>
+                                <input placeholder="Enter Due Date Here" type="text" class="form-control input-height-k"
+                                    id="projectTitle" required>
+                            </div>
+                            <div class="col-md-6" style="margin-top: 8px;">
+                                <label for="TimeRequired" class="form-label form-text-k">Estimated Time</label>
+                                <input placeholder="Enter time required" type="text" class="form-control"
+                                    id="projectTitle" required>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label for="owner" class="form-label form-text-k">Observer</label>
+                                <select class="form-select select-font2 input-height-k" id="owner" required>
+                                    <option value="" disabled selected>Select Observer</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Observer 1</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Observer 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label for="owner" class="form-label form-text-k">Tags</label>
+                                <select class="form-select select-font2 input-height-k" id="owner" required>
+                                    <option value="" disabled selected>Select Tags</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Tags 1</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Tags 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label for="owner" class="form-label form-text-k">Priority</label>
+                                <select class="form-select select-font2 input-height-k" id="owner" required>
+                                    <option value="" disabled selected>Select Priority</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>High</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>low</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12" style="height: 100px;">
+                                <label for="owner" class="form-label form-text-k">Sub Tasks</label>
+                                <div class="sub-task-comment">
+                                    <ul class=" comment-list-subTask">
+                                        <!-- Comments dynamically -->
+                                    </ul>
+                                    <form id="commentForm">
+                                        <div class="mb-3">
+                                            <!-- <label for="commentInput" class="form-label">Add a Comment</label> -->
+                                            <div class="d-flex" style="margin-top: 1.5rem;">
+                                                <textarea placeholder="Add Sub Task" class="form-control ms-2" id="commentInput" style="width: 101%;"
+                                                    rows="1"></textarea>
+                                            </div>
+        
+                                        </div>
+                                       
+        
+                                    </form>
+                                </div>
+                              </div>
+                            <div class="col-md-12">
+                                <label for="owner" class="form-label form-text-k">Attachements</label>
+                                <div id="drop-area" class="mt-1" onclick="fileInput.click()">
+                                    <div class="d-flex justify-content-between">
+                                        <p style="padding-bottom: 5px;">Drag and drop files here or click to select files</p>
+                                        <p style="padding-bottom: 5px;">Max 10 Files</p>
+                                    </div>
+                                 
+                                  <input type="file" id="fileInput" class="d-none" multiple>
+                                </div>
+                                <div id="file-list" class="mt-1">
+                                </div>
+                              </div>
+                           
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-k">
+                    <button type="button" class="btn btn-modal1" data-bs-dismiss="modal">Create Task</button>
+                    <button type="button" class="btn btn-modal3">Save & Create New Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Task modal end -->
+    <!-- Filter modal start -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="exampleModalLabel">Filter By</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-2 p-2">
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Owner</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Select an owner</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Status</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Select a status</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Priority</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Select a priority</option>
+                                    <option value="">Medium</option>
+                                    <option value="owner2">Low</option>
+                                    <option value="owner2">High</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Created By</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Created by</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer modal-footer-k2">
+                                <button type="button" class="btn btn-modal1" data-bs-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-modal2">Cancel</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Filter modal end -->
+
+    <!-- Calendar modal start -->
+    <!-- <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  " style="max-width: 800px;  ">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container theme-showcase">
+
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Calendar modal end -->
+     <!-- Edit project modal start -->
+     <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mt-0 me-0 " style="height: 100vh;">
+            <div class="modal-content" style="height: 100vh;">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="exampleModalLabel">Edit Project</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-12 mt-3">
+                                <label for="projectTitle" class="form-label form-text-k">Project Title</label>
+                                <input placeholder="Enter title here" type="text" class="form-control" id="projectTitle"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mt-1">
+
+                                <label for="owner" class="form-label form-text-k">Owner</label>
+                                <select class="form-select select-font2" id="owner" required>
+                                    <option value="" disabled selected>Select an owner</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="dropdown col-md-6 mt-0  " data-control="checkbox-dropdown">
+                                <label for="q_created_by_id_eq" class="custom-label pt-1 form-text-k ">Member</label>
+
+                                <label for="Member" class="dropdown-check form-label member-k">Select Member</label>
+                                <div class="dropdown-list">
+                                    <a href="#" data-toggle="check-all" class="dropdown-option">
+                                        Select All
+                                    </a>
+
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                                        Kshitij Rasal
+                                    </label>
+
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                                        Sagar Singh
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="comment" class="form-label form-text-k">Description</label>
+                                <textarea placeholder="Enter Description Here" class="form-control" id="comment"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="startDate" class="form-label form-text-k">Start Date</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="endDate" class="form-label form-text-k">End Date</label>
+                                <input type="date" class="form-control" id="endDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="priority" class="form-label form-text-k">Priority</label>
+                                <select class="form-select select-font2" required>
+                                    <option value="" disabled selected>Select Priority</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low</option>
+                                    <option value="low">High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-k">
+                    <button type="button" class="btn btn-modal1" data-bs-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-modal2">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit project modal end -->
+
+     <!-- Delete modal start -->
+     <div class="modal fade" id="deleteProjectModal" tabindex="-1" role="dialog"
+     aria-labelledby="deleteProjectModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header modal-header-k">
+                 <h6 class="modal-title text-center w-100" id="deleteProjectModalLabel">Delete Project</h6>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 Are you sure you want to delete this project?
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn orange-border" data-bs-dismiss="modal">No</button>
+                 <button type="button" class="btn btn-danger">Yes</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+ <!-- delete modal end -->
+    <script>
+        $(document).ready(function () {
+            var CheckboxDropdown = function (el) {
+                var _this = this;
+                this.isOpen = false;
+                this.areAllChecked = false;
+                this.$el = $(el);
+                this.$label = this.$el.find('.dropdown-check');
+                this.$checkAll = this.$el.find('[data-toggle="check-all"]').first();
+                this.$inputs = this.$el.find('[type="checkbox"]');
+
+                this.onCheckBox();
+
+                this.$label.on('click', function (e) {
+                    e.preventDefault();
+                    _this.toggleOpen();
+                });
+
+                this.$checkAll.on('click', function (e) {
+                    e.preventDefault();
+                    _this.onCheckAll();
+                });
+
+                this.$inputs.on('change', function (e) {
+                    _this.onCheckBox();
+                });
+            };
+
+            CheckboxDropdown.prototype.onCheckBox = function () {
+                this.updateStatus();
+            };
+
+            CheckboxDropdown.prototype.updateStatus = function () {
+                var checked = this.$el.find(':checked');
+
+                this.areAllChecked = false;
+                this.$checkAll.html('Check All');
+
+                if (checked.length <= 0) {
+                    this.$label.html('Select Members').css('color', 'grey');
+                } else if (checked.length === 1) {
+                    this.$label.html(checked.parent('label').text());
+                } else if (checked.length === this.$inputs.length) {
+                    this.$label.html('All Selected');
+                    this.areAllChecked = true;
+                    this.$checkAll.html('Uncheck All');
+                } else {
+                    this.$label.html(checked.length + ' Selected');
+                }
+            };
+
+            CheckboxDropdown.prototype.onCheckAll = function (checkAll) {
+                if (!this.areAllChecked || checkAll) {
+                    this.areAllChecked = true;
+                    this.$checkAll.html('Uncheck All');
+                    this.$inputs.prop('checked', true);
+                } else {
+                    this.areAllChecked = false;
+                    this.$checkAll.html('Check All');
+                    this.$inputs.prop('checked', false);
+                }
+
+                this.updateStatus();
+            };
+
+            CheckboxDropdown.prototype.toggleOpen = function (forceOpen) {
+                var _this = this;
+
+                if (!this.isOpen || forceOpen) {
+                    this.isOpen = true;
+                    this.$el.addClass('on');
+                    $(document).on('click', function (e) {
+                        if (!$(e.target).closest('[data-control]').length) {
+                            _this.toggleOpen();
+                        }
+                    });
+                } else {
+                    this.isOpen = false;
+                    this.$el.removeClass('on');
+                    $(document).off('click');
+                }
+            };
+
+            var checkboxesDropdowns = document.querySelectorAll('[data-control="checkbox-dropdown"]');
+            checkboxesDropdowns = Array.from(checkboxesDropdowns);
+            checkboxesDropdowns.forEach(function (el) {
+                new CheckboxDropdown(el);
+            });
+        });
+        // drag and drop feture start
+
+        document.addEventListener('DOMContentLoaded', function () {
+        var cards = document.querySelectorAll('.go-shadow-k');
+        var draggedCard = null;
+
+        cards.forEach(function (card) {
+            card.addEventListener('dragstart', function (e) {
+                draggedCard = this;
+                this.classList.add('dragging');
+            });
+
+            card.addEventListener('dragover', function (e) {
+                e.preventDefault();
+            });
+
+            card.addEventListener('drop', function (e) {
+                e.preventDefault();
+                if (draggedCard !== card && !draggedCard.classList.contains('no-drag')) {
+                    var parent = card.parentNode;
+                    var index1 = Array.prototype.indexOf.call(parent.children, draggedCard);
+                    var index2 = Array.prototype.indexOf.call(parent.children, card);
+                    parent.insertBefore(draggedCard, card);
+                    parent.insertBefore(card, parent.children[index1 + (index1 < index2 ? 0 : 1)]);
+                }
+
+                cards.forEach(function (card) {
+                    card.classList.remove('dragging');
+                });
+            });
+
+            var dropTargets = card.querySelectorAll('.details-section, .details-section-main');
+            dropTargets.forEach(function (dropTarget) {
+                dropTarget.addEventListener('dragover', function (e) {
+                    e.preventDefault();
+                    var rect = dropTarget.getBoundingClientRect();
+                    var offset = e.clientY - rect.top;
+
+                    //scroll position  
+                    if (offset < 20) {
+                        dropTarget.scrollTop -= 10;
+                    } else if (offset > rect.height - 20) {
+                        dropTarget.scrollTop += 10;
+                    }
+                });
+
+                dropTarget.addEventListener('drop', function (e) {
+                    e.preventDefault();
+                    if (draggedCard !== card && !draggedCard.classList.contains('no-drag')) {
+                        var parent = card.querySelector('.details-section, .details-section-main');
+                        var index1 = Array.prototype.indexOf.call(parent.children, draggedCard);
+                        var index2 = Array.prototype.indexOf.call(parent.children, dropTarget);
+                        parent.insertBefore(draggedCard, dropTarget);
+                        parent.insertBefore(dropTarget, parent.children[index1 + (index1 < index2 ? 0 : 1)]);
+                    }
+
+                    cards.forEach(function (card) {
+                        card.classList.remove('dragging');
+                    });
+                });
+            });
+        });
+
+        cards.forEach(function (card) {
+            card.addEventListener('dragend', function () {
+                draggedCard = null;
+            });
+        });
+    });
+    // drag and drop feture start
+const dropArea = document.getElementById('drop-area');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('file-list');
+
+    dropArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropArea.classList.add('border-primary');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+      dropArea.classList.remove('border-primary');
+    });
+
+    dropArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropArea.classList.remove('border-primary');
+      const files = e.dataTransfer.files;
+      handleFiles(files);
+    });
+
+    fileInput.addEventListener('change', () => {
+      const files = fileInput.files;
+      handleFiles(files);
+    });
+
+    function handleFiles(files) {
+      fileList.innerHTML = '';
+
+      for (const file of files) {
+        const listItem = document.createElement('div');
+        listItem.classList.add('file-item');
+
+        const fileName = document.createElement('span');
+        fileName.innerHTML = `<strong>${file.name}</strong> (${formatBytes(file.size)})`;
+        listItem.appendChild(fileName);
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.classList.add('btn', 'btn-danger', 'btn-sm', 'ms-2');
+        removeButton.addEventListener('click', () => removeFile(listItem, file));
+        listItem.appendChild(removeButton);
+
+        fileList.appendChild(listItem);
+      }
+    }
+
+    function removeFile(listItem, file) {
+      listItem.remove();
+      console.log(`Removed file: ${file.name}`);
+    }
+
+    function formatBytes(bytes, decimals = 2) {
+      if (bytes === 0) return '0 Bytes';
+
+      const k = 1024;
+      const dm = decimals < 0 ? 0 : decimals;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
+
+    // drag and drop for files end
+
+    // comment start
+  document.getElementById('commentInput').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            // Prevent the default behavior of the Enter key (which is usually a line break in a textarea)
+            event.preventDefault();
+            
+            // Call the addComment function
+            addComment();
+        }
+    });
+
+    function addComment() {
+        var commentText = document.getElementById('commentInput').value;
+        if (commentText.trim() !== '') {
+            var commentList = document.querySelector('.comment-list-subTask');
+            var newComment = document.createElement('li');
+
+            var now = new Date();
+            var dateString = now.toLocaleDateString();
+            var timeString = now.toLocaleTimeString();
+
+            newComment.innerHTML = `
+     
+    <div class="comment-text">${commentText}</div>
+`;
+
+            commentList.prepend(newComment);
+            document.getElementById('commentInput').value = '';
+        }
+    }
+
+    function cancelComment() {
+        document.getElementById('commentInput').value = '';
+    }
+    // Comment end
+
+    // copy project link
+    document.getElementById('copyLink').addEventListener('click', function () {
+            var dummyTextArea = document.createElement('textarea');
+            dummyTextArea.value = window.location.href;
+            document.body.appendChild(dummyTextArea);
+
+
+            dummyTextArea.select();
+            dummyTextArea.setSelectionRange(0, 99999);
+
+            document.execCommand('copy');
+            document.body.removeChild(dummyTextArea);
+
+            alert('Project Link copied to clipboard!');
+        });
+        // copy project link end
+    </script>
+
+</body>
+
+</html>

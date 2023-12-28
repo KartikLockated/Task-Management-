@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwoSuITuEldNJhrM8eTfyS-GYMoNbt-P5Dg&usqp=CAU" />
+
+    <script src="./js/main.js"></script>
+    <title>Project Details Page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <!-- links for copy url -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Top -->
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img alt="logo" class="go-logo-k" src="img\Lockated_Logo.png" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./1CF_Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./31Dashboard_Daily.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./31Dashboard_Daily.html">Setup</a>
+                    </li>
+                </ul>
+                <div class="top-nav-right">
+                    <div class="d-flex search-input">
+                        <span class="material-symbols-outlined"> search </span>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            1201/D Jyoti Tower
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>1346/F Hayat Tower</li>
+                            <li>9876/A JP Morgan Tower</li>
+                            <li>Busan Rcidency</li>
+                        </ul>
+                    </div>
+                    <span class="material-symbols-outlined"> apps </span>
+                    <div class="avatar" type="button" data-bs-toggle="modal" data-bs-target="#userInfo">
+                        <div class="avatar__letters">A</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation above -->
+
+    <!-- sidebar start below -->
+    <div class="sidebar sidebar_inner" id="mySidebar">
+        <p class="closebtn">
+            <span class="material-symbols-outlined cancel" onclick="closeNav()">
+                cancel
+            </span>
+        </p>
+        <ul class="p-0">
+            <!--  button for closing sidebar-->
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Asset</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Audit</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Service</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Tickets</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">AMC</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Customers</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Vendor</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span class="text">Permit
+                        to Work</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Inventory</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">MoM</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group2">
+                    <a class="text nav-link dropdown-toggle asset-after" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img alt="" src="img\Agreements.png" /><span class="text">Task Management</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Setup</a></li>
+                        <li><a href="#">Incidents</a></li>
+                        <li><a href="#">Design Inputs</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Setup</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- sidebar ends above -->
+
+    <!-- webpage conteaint start -->
+    <div class="website-content">
+        <!-- module top navigation  -->
+        <div class="module-data-section mt-2">
+            <div class="container-sm d-flex justify-content-between pe-4 list-top">
+                <p class="topflex-p">Project</p>
+                <p class="topflex-p" id="topflex-p-child">Maintainance</p>
+                <p class="topflex-p">Finance</p>
+                <p class="topflex-p">CRM</p>
+                <p class="topflex-p">Utility</p>
+                <p class="topflex-p">Visitors</p>
+                <p class="topflex-p">Experience</p>
+                <p class="topflex-p">Property</p>
+            </div>
+            <div class="ms-1">
+                <div class="p-1 d-flex justify-content-between">
+                    <div class="d-flex"><span class="pe-2"><img src="img/Globe.svg" alt=""></span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle fs-5" style="font-weight: 500;" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Project 1
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal3">Edit Project</a></li>
+                                <li><a class="dropdown-item" href="#" id="copyLink">Copy Project Link</a></li>
+                                <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#deleteProjectModal">Delete Project</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Set Status
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
+                                            src="img/yellow.svg" alt=""></span>In Progress</a></li>
+                            <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
+                                            src="img/red.svg" alt=""></span>Overdue</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                            src="img/green.svg" alt=""></span>Completed</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                            src="img/blue.svg" alt=""></span>Abort</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                            src="img/orange.svg" alt=""></span>On Hold</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-sm d-flex justify-content-start pe-4 border-bottom-main list-top project-div"
+                    style="padding-left: 33px; max-width: 1711px;">
+                    <p class="topflex-p2 ps-3" id="topflex-p-child2">Overview</p>
+                    <p class="topflex-p2">List</p>
+                    <a href="kanban_list.html">
+                        <p class="topflex-p2">Kanban</p>
+                    </a>
+                    <p class="topflex-p2">Dashboard</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-100 d-flex">
+            <div id="project-dt-1">
+                <div class="mb-3 project-textarea">
+                    <h5>Project Description</h5>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                        placeholder="What’s this project about?" rows="6"></textarea>
+                </div>
+                <div style="margin: 0px 16px 0px 35px;">
+                    <h5 class="ps-2">Project Roles</h5>
+                    <div>
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="d-flex pointer" data-bs-toggle="modal" data-bs-target="#addMemberModal">
+                                        <div id="add-mem"><img id="add-mem-img" src="img/Plus-details.svg" alt=""></div>
+                                        <p id="add-project">Add Member</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="add-member">
+                                            <p class="add-member-txt">K</p>
+                                        </div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-member-child1">Kshitij Rasal <span>
+                                                    <p class="add-member-child2">Project Owner</p>
+                                                </span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="add-member">
+                                            <p class="add-member-txt">R</p>
+                                        </div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-member-child1">Rajanish Patil<span>
+                                                    <p class="add-member-child2">QA</p>
+                                                </span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container text-center mt-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="add-member">
+                                            <p class="add-member-txt">D</p>
+                                        </div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-member-child1">Dinesh Shinde<span>
+                                                    <p class="add-member-child2">QA</p>
+                                                </span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="add-member">
+                                            <p class="add-member-txt">S</p>
+                                        </div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-member-child1">Satyam Madrewar<span>
+                                                    <p class="add-member-child2">Developer</p>
+                                                </span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="add-member">
+                                            <p class="add-member-txt-light">R</p>
+                                        </div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-member-child1-light">Rajanish Patil<span>
+                                                    <p class="add-member-child2-light">Rajanish Patil</p>
+                                                </span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="project-dt-2">
+                <div id="project-dt-2-1">
+                    <p id="project-dt-2-1-child"><img id="project-dt-2-1-img" src="img/WarningDiamond.svg" alt="">High
+                        Priority</p>
+                </div>
+                <div id="project-dt-2-2" class="mt-4 mb-4">
+                    <h5 class="ps-3">What’s the status?</h5>
+                    <div class="container overflow-hidden text-center">
+                        <div class="row">
+                            <div class="col-6 project-dt-2-2-child">
+                                <div class="p-1 ps-3 text-start project-dt-2-2-child-font"><span><img class="pe-2 pb-1"
+                                            src="img/yellow.svg" alt=""></span>In Progress</div>
+                            </div>
+                            <div class="col-6 project-dt-2-2-child">
+                                <div class="p-1 ps-3 text-start project-dt-2-2-child-font"><span><img class="pe-2 pb-1"
+                                            src="img/green.svg" alt=""></span>Completed</div>
+                            </div>
+                            <div class="col-6 project-dt-2-2-child">
+                                <div class="p-1 ps-3 text-start project-dt-2-2-child-font"><span><img class="pe-2 pb-1"
+                                            src="img/red.svg" alt=""></span>On Hold</div>
+                            </div>
+                            <div class="col-6 project-dt-2-2-child">
+                                <div class="p-1 ps-3 text-start project-dt-2-2-child-font"><span><img class="pe-2 pb-1"
+                                            src="img/blue.svg" alt=""></span>Abort</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    
+                    <div class="container text-center" style="height: 100vh;">
+                        <div class="row">
+                            <div class="row mt-2 mb-4">
+                                <div class="d-flex ">
+                                    <div class="add-mem2-main"><img class="add-mem-img2" src="img/Calenda.svg" alt=""></div>
+                                    <div class="ms-3 text-start">
+                                        <p class="add-mem-child1">Jan 1 , 2023<span>
+                                                <div>
+                                                    <p class="add-mem-child2">Start Date</p>
+                                                </div>
+                                            </span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="d-flex ">
+                                    <div class="add-mem2"><img class="add-mem-img2" src="img/User.svg" alt=""></div>
+                                    <div class="ms-3 text-start add-mem3">
+                                        <p class="add-mem-child1">Project Created<span>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="add-mem-child2">By Kshitij Rasal</p>
+                                                    <p class="add-mem-child2">10 days ago</p>
+
+                                                </div>
+                                            </span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="d-flex ">
+                                    <div class="add-mem2"><img class="add-mem-img2" src="img/UsersThree.svg" alt="">
+                                    </div>
+                                    <div class="ms-3 text-start add-mem3">
+                                        <p class="add-mem-child1">Rajanish Patil , Dinesh Shinde , Satyam Madrewar<span>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="add-mem-child2">joined</p>
+                                                    <p class="add-mem-child2">9 days ago</p>
+
+                                                </div>
+                                            </span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="d-flex  ">
+                                    <div class="add-mem2"><img class="add-mem-img2" src="img/Calenda.svg" alt=""></div>
+                                    <div class="ms-3 text-start">
+                                        <p class="add-member-child1">NA<span>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="add-mem-child2">End Date</p>
+                                                </div>
+                                            </span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit project modal start -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mt-0 me-0 " style="height: 100vh;">
+            <div class="modal-content" style="height: 100vh;">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="exampleModalLabel">Edit Project</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-12 mt-3">
+                                <label for="projectTitle" class="form-label form-text-k">Project Title</label>
+                                <input placeholder="Enter title here" type="text" class="form-control" id="projectTitle"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mt-1">
+
+                                <label for="owner" class="form-label form-text-k">Owner</label>
+                                <select class="form-select select-font2" id="owner" required>
+                                    <option value="" disabled selected>Select an owner</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="dropdown col-md-6 mt-0  " data-control="checkbox-dropdown">
+                                <label for="q_created_by_id_eq" class="custom-label pt-1 form-text-k">Member</label>
+
+                                <label for="Member" class="dropdown-check form-label ">Select Member</label>
+                                <div class="dropdown-list">
+                                    <a href="#" data-toggle="check-all" class="dropdown-option">
+                                        Select All
+                                    </a>
+
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                                        Kshitij Rasal
+                                    </label>
+
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                                        Sagar Singh
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="comment" class="form-label form-text-k">Description</label>
+                                <textarea placeholder="Enter Description Here" class="form-control" id="comment"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="startDate" class="form-label form-text-k">Start Date</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="endDate" class="form-label form-text-k">End Date</label>
+                                <input type="date" class="form-control" id="endDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="priority" class="form-label form-text-k">Priority</label>
+                                <select class="form-select select-font2" required>
+                                    <option value="" disabled selected>Select Priority</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low</option>
+                                    <option value="low">High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-k">
+                    <button type="button" class="btn btn-modal1" data-bs-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-modal2">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit project modal end -->
+
+    <!-- Delete modal start -->
+    <div class="modal fade" id="deleteProjectModal" tabindex="-1" role="dialog"
+        aria-labelledby="deleteProjectModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="deleteProjectModalLabel">Delete Project</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this project?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn orange-border" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- delete modal end -->
+
+    <!-- Add member modal start -->
+    <div class="modal fade" id="addMemberModal" tabindex="-1" role="dialog" aria-labelledby="addMemberModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="addMemberModalLabel">Add Member</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p class="btn-title">Name *</p>
+                        <div class="d-flex">
+
+                            <button id="add-member-btn" data-bs-toggle="modal" data-bs-target="#inviteMemberModal">
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Add members by name......">
+                            </button>
+                            <button type="submit" class=" btn-member" data-bs-toggle="modal" data-bs-target="#inviteMemberModal">Add</button>
+                        </div>
+                    </div>
+                    <div class="memberss">
+                        <p class="ms-2">Members (4)</p>
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="row mt-2 mb-4">
+                                    <div class="d-flex">
+                                        <div class="add-member2"><p class="add-member2-txt">K</p></div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-mem-child1">Kshitij Rasal<span>
+                                                    <div>
+                                                        <p class="add-mem-child2">Project Owner</p>
+                                                    </div>
+                                                </span></p>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="d-flex">
+                                        <div class="add-member2"><p class="add-member2-txt">R</p></div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-mem-child1">Rajanish Patil<span>
+                                                    <div>
+                                                        <p class="add-mem-child2">QA</p>
+                                                    </div>
+                                                </span></p>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="d-flex">
+                                        <div class="add-member2"><p class="add-member2-txt">D</p>
+                                        </div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-mem-child1">Dinesh Shinde<span>
+                                                    <div>
+                                                        <p class="add-mem-child2">QA</p>
+                                                    </div>
+                                                </span></p>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="d-flex">
+                                        <div class="add-member2"><p class="add-member2-txt">S</p></div>
+                                        <div class="mt-1 ms-3 text-start">
+                                            <p class="add-mem-child1">Satyam Madrewar<span>
+                                                    <div>
+                                                        <p class="add-mem-child2">Developer</p>
+                                                    </div>
+                                                </span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add member modal end -->
+
+    <!-- Add member modal CHILD start -->
+    <div class="modal fade" id="inviteMemberModal" tabindex="-1" role="dialog" aria-labelledby="inviteMemberModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="height: 464px;">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="addMemberModalLabel">Add Member</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p class="btn-title ps-2">Name *</p>
+                                  <div class="dropdown col-md-12 mt-2  " data-control="checkbox-dropdown">
+                                <label for="Member" class="dropdown-check form-label text-secondary rounded">Add members by name.....</label>
+                                <div class="dropdown-list" style="margin-top: 10px;">
+                                    <a href="#" data-toggle="check-all" class="dropdown-option">
+                                        Select All
+                                    </a>
+                        
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                                        Kshitij Rasal
+                                    </label>
+                        
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                                        Sagar Singh
+                                    </label>
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                                        Sagar Singh
+                                    </label>
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                                        Sagar Singh
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3 mt-4">
+                                <p class="btn-title ps-2">Message (optional)</p>
+                                <textarea class="form-control" placeholder="Add a message" id="exampleFormControlTextarea1" rows="5"></textarea>
+                              </div>
+                        <div class="d-flex justify-content-end pt-4">
+                            <button type="submit" class="btn-member2">Cancel</button>
+                            <button type="submit" class="btn-member">Done</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Add member modal CHILD end -->
+
+    <script>
+        // copy project link
+        document.getElementById('copyLink').addEventListener('click', function () {
+            var dummyTextArea = document.createElement('textarea');
+            dummyTextArea.value = window.location.href;
+            document.body.appendChild(dummyTextArea);
+
+
+            dummyTextArea.select();
+            dummyTextArea.setSelectionRange(0, 99999);
+
+            document.execCommand('copy');
+            document.body.removeChild(dummyTextArea);
+
+            alert('Project Link copied to clipboard!');
+        });
+        // copy project link end
+
+        // checkbox script
+        $(document).ready(function () {
+            var CheckboxDropdown = function (el) {
+                var _this = this;
+                this.isOpen = false;
+                this.areAllChecked = false;
+                this.$el = $(el);
+                this.$label = this.$el.find('.dropdown-check');
+                this.$checkAll = this.$el.find('[data-toggle="check-all"]').first();
+                this.$inputs = this.$el.find('[type="checkbox"]');
+
+                this.onCheckBox();
+
+                this.$label.on('click', function (e) {
+                    e.preventDefault();
+                    _this.toggleOpen();
+                });
+
+                this.$checkAll.on('click', function (e) {
+                    e.preventDefault();
+                    _this.onCheckAll();
+                });
+
+                this.$inputs.on('change', function (e) {
+                    _this.onCheckBox();
+                });
+            };
+
+            CheckboxDropdown.prototype.onCheckBox = function () {
+                this.updateStatus();
+            };
+
+            CheckboxDropdown.prototype.updateStatus = function () {
+                var checked = this.$el.find(':checked');
+
+                this.areAllChecked = false;
+                this.$checkAll.html('Check All');
+
+                if (checked.length <= 0) {
+                    this.$label.html('Select Members').css('color', 'grey');
+                } else if (checked.length === 1) {
+                    this.$label.html(checked.parent('label').text());
+                } else if (checked.length === this.$inputs.length) {
+                    this.$label.html('All Selected');
+                    this.areAllChecked = true;
+                    this.$checkAll.html('Uncheck All');
+                } else {
+                    this.$label.html(checked.length + ' Selected');
+                }
+            };
+
+            CheckboxDropdown.prototype.onCheckAll = function (checkAll) {
+                if (!this.areAllChecked || checkAll) {
+                    this.areAllChecked = true;
+                    this.$checkAll.html('Uncheck All');
+                    this.$inputs.prop('checked', true);
+                } else {
+                    this.areAllChecked = false;
+                    this.$checkAll.html('Check All');
+                    this.$inputs.prop('checked', false);
+                }
+
+                this.updateStatus();
+            };
+
+            CheckboxDropdown.prototype.toggleOpen = function (forceOpen) {
+                var _this = this;
+
+                if (!this.isOpen || forceOpen) {
+                    this.isOpen = true;
+                    this.$el.addClass('on');
+                    $(document).on('click', function (e) {
+                        if (!$(e.target).closest('[data-control]').length) {
+                            _this.toggleOpen();
+                        }
+                    });
+                } else {
+                    this.isOpen = false;
+                    this.$el.removeClass('on');
+                    $(document).off('click');
+                }
+            };
+
+            var checkboxesDropdowns = document.querySelectorAll('[data-control="checkbox-dropdown"]');
+            checkboxesDropdowns = Array.from(checkboxesDropdowns);
+            checkboxesDropdowns.forEach(function (el) {
+                new CheckboxDropdown(el);
+            });
+        });
+     
+    </script>
+</body>
+
+</html>

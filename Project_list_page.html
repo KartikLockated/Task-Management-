@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwoSuITuEldNJhrM8eTfyS-GYMoNbt-P5Dg&usqp=CAU" />
+
+    <script src="./js/main.js"></script>
+    <!--scrept for task hover -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <!--scrept for task hover -->
+    <title>Project Listing Home</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<body>
+    <!-- Navigation Top -->
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img alt="logo" class="go-logo-k" src="img\Lockated_Logo.png" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./1CF_Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./31Dashboard_Daily.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./31Dashboard_Daily.html">Setup</a>
+                    </li>
+                </ul>
+                <div class="top-nav-right">
+                    <div class="d-flex search-input">
+                        <span class="material-symbols-outlined"> search </span>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            1201/D Jyoti Tower
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>1346/F Hayat Tower</li>
+                            <li>9876/A JP Morgan Tower</li>
+                            <li>Busan Rcidency</li>
+                        </ul>
+                    </div>
+                    <span class="material-symbols-outlined"> apps </span>
+                    <div class="avatar" type="button" data-bs-toggle="modal" data-bs-target="#userInfo">
+                        <div class="avatar__letters">A</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation above -->
+
+    <!-- sidebar start below -->
+    <div class="sidebar sidebar_inner" id="mySidebar">
+        <p class="closebtn">
+            <span class="material-symbols-outlined cancel" onclick="closeNav()">
+                cancel
+            </span>
+        </p>
+        <ul class="p-0">
+            <!--  button for closing sidebar-->
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Asset</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Audit</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Service</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Tickets</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">AMC</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Customers</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Vendor</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span class="text">Permit
+                        to Work</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Inventory</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">MoM</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group2">
+                    <a class="text nav-link dropdown-toggle asset-after" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img alt="" src="img\Agreements.png" /><span class="text">Task Management</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Setup</a></li>
+                        <li><a href="#">Incidents</a></li>
+                        <li><a href="#">Design Inputs</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <img alt="" class="ms-1 sidebar-img-k" src="img\Agreements.png" /> &nbsp;<span
+                        class="text">Setup</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- sidebar ends above -->
+
+    <!-- webpage conteaint start -->
+    <div class="website-content">
+        <!-- module top navigation  -->
+        <div class="module-data-section mt-2">
+            <div class="container-sm d-flex justify-content-between pe-4 list-top">
+                <p class="topflex-p">Project</p>
+                <p class="topflex-p" id="topflex-p-child">Maintainance</p>
+                <p class="topflex-p">Finance</p>
+                <p class="topflex-p">CRM</p>
+                <p class="topflex-p">Utility</p>
+                <p class="topflex-p">Visitors</p>
+                <p class="topflex-p">Experience</p>
+                <p class="topflex-p">Property</p>
+            </div>
+            <div class="d-flex justify-content-between pe-4 p-2 pt-3 border-bottom-main project-div">
+                <div class="d-flex">
+                    <h5 class="ms-3 pt-1">Projects</h5>
+                    <div class="d-flex search-input ms-4" style="height: 22px; width: 270px;">
+                        <span class="material-symbols-outlined"> search </span>
+                        <input class="form-control me-2 fw-lighter" type="search" placeholder="Search"
+                            aria-label="Search" style="font-size: 12px;" />
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="me-2"> <button button type="button" class=" go-shadow-k" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2" id="add-project-btn2"><img id="funnel-sm"
+                                src="img/Vector.svg" alt="funnel"></button>
+                    </div>
+                    <div class="me-2"> <button type="button" class=" go-shadow-k" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" id="add-project-btn"><span class="pe-2"><img
+                                    src="img/Plus.svg" style="margin-bottom: 3px;" alt="plus"></span> Add
+                            Project</button></div>
+
+                    <div class="me-2"> <button id="add-project-btn3" class=" go-shadow-k bg-white"><span class="pe-2"><img
+                                    style="margin-bottom: 3px;" src="img/DownloadSimple.svg"
+                                    alt="Download"></span>Download Report</button></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table go-shadow-k" style="width: 99%;">
+                <thead class="text-center table-bordered">
+                    <tr>
+                        <th style="width: 5%;" scope="col" class="border-1">Action</th>
+                        <th scope="col" class="border-1">Project Name</th>
+                        <th style="width: 9%;" scope="col" class="border-1">Tasks</th>
+                        <th scope="col" class="border-1">Status</th>
+                        <th scope="col" class="border-1">Priority</th>
+                        <th scope="col" class="border-1">Start Date</th>
+                        <th scope="col" class="border-1">End Date</th>
+                        <th scope="col" class="border-1">Created On</th>
+                        <th style="width: 9%;" scope="col" class="border-1">Created By</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="Project-Detail-Page.html">
+                                <img src="img/Eye.svg" alt="">
+                            </a>
+                        </td>
+                        
+                        <td>Project 1</td>
+                        <td>
+                            <div class="progress-container">
+                                <span class="progress-label-left" data-toggle="tooltip" data-bs-placement="bottom"
+                                    title="0 Task">0</span>
+                                <div class="progress progress-k">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%;"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                        30%
+                                    </div>
+                                </div>
+                                <span class="progress-label-right" data-toggle="tooltip" data-bs-placement="bottom"
+                                    title="0 Task">0</span>
+                            </div>
+                        </td>
+
+                        <td class="dropdown">
+                            <span class="dropdown-toggle" data-bs-toggle="dropdown">
+                                <img class="pb-1" src="img/green.svg" alt="">
+                                Active
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
+                                                src="img/yellow.svg" alt=""></span>In Progress</a></li>
+                                <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
+                                                src="img/red.svg" alt=""></span>Overdue</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                                src="img/green.svg" alt=""></span>Completed</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                                src="img/blue.svg" alt=""></span>Abort</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                                src="img/orange.svg" alt=""></span>On Hold</a></li>
+                            </ul>
+                        </td>
+                        <td>High</td>
+                        <td>01/01/2023</td>
+                        <td>-</td>
+                        <td>31/12/2022 10:00 AM</td>
+                        <td>Kshitij Rasal</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add project modal start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mt-0 me-0 " style="height: 100vh;">
+            <div class="modal-content" style="height: 100vh;">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="exampleModalLabel">New Project</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-12 mt-4">
+                                <label for="projectTitle" class="form-label form-text-k">Project Title</label>
+                                <input placeholder="Enter title here" type="text" class="form-control" id="projectTitle"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label for="owner" class="form-label form-text-k">Owner</label>
+                                <select class="form-select select-font2" id="owner" required>
+                                    <option value="" disabled selected>Select an owner</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Kshitij Rasal</option>
+                                    <option value="" class="employess"><span><img src="img\UserCircle.png"
+                                                alt=""></span>Sagar Singh</option>
+                                </select>
+                            </div>
+                            <div class="dropdown col-md-6 mt-2  " data-control="checkbox-dropdown">
+                                <label for="q_created_by_id_eq" class="custom-label pt-1 form-text-k">Member</label>
+
+                                <label for="Member" class="dropdown-check form-label ">Select Member</label>
+                                <div class="dropdown-list">
+                                    <a href="#" data-toggle="check-all" class="dropdown-option">
+                                        Select All
+                                    </a>
+                        
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                                        Kshitij Rasal
+                                    </label>
+                        
+                                    <label class="dropdown-option">
+                                        <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                                        Sagar Singh
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="comment" class="form-label form-text-k">Description</label>
+                                <textarea placeholder="Enter Description Here" class="form-control" id="comment"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="startDate" class="form-label form-text-k">Start Date</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="endDate" class="form-label form-text-k">End Date</label>
+                                <input type="date" class="form-control" id="endDate" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="priority" class="form-label form-text-k">Priority</label>
+                                <select class="form-select select-font2" required>
+                                    <option value="" disabled selected>Select Priority</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low</option>
+                                    <option value="low">High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-k">
+                    <button type="button" class="btn btn-modal1" data-bs-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-modal2">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add project modal end -->
+
+    
+
+    <!-- Filter modal start -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modal-header-k">
+                    <h6 class="modal-title text-center w-100" id="exampleModalLabel">Filter By</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-2 p-2">
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Owner</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Select an owner</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Status</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Select a status</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Priority</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Select a priority</option>
+                                    <option value="">Medium</option>
+                                    <option value="owner2">low</option>
+                                    <option value="owner2">High</option>
+
+                                </select>
+                            </div>
+                            <div class="col-md-4 filter-class1">
+                                <label for="owner" class="form-label form-text-k">Created By</label>
+                                <select class="form-select select-font" id="owner" required>
+                                    <option value="" disabled selected>Created by</option>
+                                    <option value="">Owner 1</option>
+                                    <option value="owner2">Owner 2</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer modal-footer-k2">
+                                <button type="button" class="btn btn-modal1" data-bs-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-modal2">Cancel</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Filter modal end -->
+    <script>
+        $(document).ready(function () {
+            var CheckboxDropdown = function (el) {
+                var _this = this;
+                this.isOpen = false;
+                this.areAllChecked = false;
+                this.$el = $(el);
+                this.$label = this.$el.find('.dropdown-check');
+                this.$checkAll = this.$el.find('[data-toggle="check-all"]').first();
+                this.$inputs = this.$el.find('[type="checkbox"]');
+
+                this.onCheckBox();
+
+                this.$label.on('click', function (e) {
+                    e.preventDefault();
+                    _this.toggleOpen();
+                });
+
+                this.$checkAll.on('click', function (e) {
+                    e.preventDefault();
+                    _this.onCheckAll();
+                });
+
+                this.$inputs.on('change', function (e) {
+                    _this.onCheckBox();
+                });
+            };
+
+            CheckboxDropdown.prototype.onCheckBox = function () {
+                this.updateStatus();
+            };
+
+            CheckboxDropdown.prototype.updateStatus = function () {
+                var checked = this.$el.find(':checked');
+
+                this.areAllChecked = false;
+                this.$checkAll.html('Check All');
+
+                if (checked.length <= 0) {
+                    this.$label.html('Select Members').css('color', 'grey');
+                } else if (checked.length === 1) {
+                    this.$label.html(checked.parent('label').text());
+                } else if (checked.length === this.$inputs.length) {
+                    this.$label.html('All Selected');
+                    this.areAllChecked = true;
+                    this.$checkAll.html('Uncheck All');
+                } else {
+                    this.$label.html(checked.length + ' Selected');
+                }
+            };
+
+            CheckboxDropdown.prototype.onCheckAll = function (checkAll) {
+                if (!this.areAllChecked || checkAll) {
+                    this.areAllChecked = true;
+                    this.$checkAll.html('Uncheck All');
+                    this.$inputs.prop('checked', true);
+                } else {
+                    this.areAllChecked = false;
+                    this.$checkAll.html('Check All');
+                    this.$inputs.prop('checked', false);
+                }
+
+                this.updateStatus();
+            };
+
+            CheckboxDropdown.prototype.toggleOpen = function (forceOpen) {
+                var _this = this;
+
+                if (!this.isOpen || forceOpen) {
+                    this.isOpen = true;
+                    this.$el.addClass('on');
+                    $(document).on('click', function (e) {
+                        if (!$(e.target).closest('[data-control]').length) {
+                            _this.toggleOpen();
+                        }
+                    });
+                } else {
+                    this.isOpen = false;
+                    this.$el.removeClass('on');
+                    $(document).off('click');
+                }
+            };
+
+            var checkboxesDropdowns = document.querySelectorAll('[data-control="checkbox-dropdown"]');
+            checkboxesDropdowns = Array.from(checkboxesDropdowns);
+            checkboxesDropdowns.forEach(function (el) {
+                new CheckboxDropdown(el);
+            });
+        });
+    </script>
+
+
+    <!-- webpage container end -->
+</body>
+
+</html>
