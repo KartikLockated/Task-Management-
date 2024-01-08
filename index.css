@@ -503,7 +503,7 @@ li {
 
 /* Task comment box start */
 .comment-box-main {
-  width: 100%!important;
+  width: 95%!important;
   /* margin-right: 48px; */
   margin-top: 28px;
   max-width: 1429px;
