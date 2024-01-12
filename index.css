@@ -1040,6 +1040,32 @@ input[type="checkbox"]:enabled:checked {
       .topflex-p2 {
         margin-right: 53px;
       }
+      #project-dt-2-2 {
+        padding-left: 27px;
+      }
+      #last-div-main {
+        height: 344px!important;
+      }
+      .last-div {
+        padding-left: 10px;
+      }
+      .project-textarea {
+        margin: 30px 45px 30px 42px;
+      }
+      .role-responsive {
+        padding-top: 15px;
+      }
+      .task-shadow {
+        padding: 10px;
+        width: 95%;
+        margin: 25px 0 21px 11px;
+      }
+      .task-table {
+        font-weight: 500;
+        font-size: medium;
+        padding-left: 0px;
+        font-size: 12px;
+      }
 }
 @media (min-width:768px) and (max-width:1023px) {
   .main-div {
