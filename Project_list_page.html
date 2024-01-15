@@ -240,7 +240,7 @@
                         <th style="width: 5%;" scope="col" class="border-1">Action</th>
                         <th scope="col" class="border-1">Project Name</th>
                         <th style="width: 9%;" scope="col" class="border-1">Tasks</th>
-                        <th scope="col" class="border-1">Status</th>
+                        <th scope="col" class="border-1" style="width: 112px;">Status</th>
                         <th scope="col" class="border-1">Priority</th>
                         <th scope="col" class="border-1">Start Date</th>
                         <th scope="col" class="border-1">End Date</th>
@@ -273,10 +273,13 @@
                             </div>
                         </td>
 
-                        <td class="dropdown">
-                            <span class="dropdown-toggle" data-bs-toggle="dropdown">
+                        <td class="dropdown text-start">
+                            <span>
                                 <img class="pb-1" src="img/green.svg" alt="">
                                 Active
+                            </span>
+                            <span class="dropdown-toggle" data-bs-toggle="dropdown">
+                               
                             </span>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
@@ -291,6 +294,7 @@
                                                 src="img/orange.svg" alt=""></span>On Hold</a></li>
                             </ul>
                         </td>
+                        
                         <td>High</td>
                         <td>01/01/2023</td>
                         <td>-</td>
@@ -302,7 +306,27 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td class="dropdown text-start">
+                            <span>
+                                <img class="pb-1" src="img/green.svg" alt="">
+                                In Progress
+                            </span>
+                            <span class="dropdown-toggle" data-bs-toggle="dropdown">
+                               
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
+                                                src="img/yellow.svg" alt=""></span>In Progress</a></li>
+                                <li><a class="dropdown-item" href="#"> <span class="me-2"><img class="pb-1"
+                                                src="img/red.svg" alt=""></span>Overdue</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                                src="img/green.svg" alt=""></span>Completed</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                                src="img/blue.svg" alt=""></span>Abort</a></li>
+                                <li><a class="dropdown-item" href="#"><span class="me-2"><img class="pb-1"
+                                                src="img/orange.svg" alt=""></span>On Hold</a></li>
+                            </ul>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
