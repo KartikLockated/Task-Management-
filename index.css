@@ -2,6 +2,9 @@
   height: 21px;
   width: 15.17px;
 }
+.sidebar-k {
+  top: 50px;
+}
 .go-logo-k {
   max-width: 13%;
   padding: 9px;
@@ -238,12 +241,21 @@ li {
   border-radius: 5px !important;
   overflow-x: scroll;
   width: 309 !important;
+  position: relative;
+  top: 125px;
 }
 .card-top {
   display: flex;
   justify-content: space-between;
   padding-right: 8px;
   height: 40px;
+  position: fixed;
+  /* position: static;
+  width: 100%; */
+  top: 202px;
+  z-index: 9999;
+  background-color: #ffff;
+  width: 20%;
 }
 .card-top-child1 {
   color: #ffff;
@@ -460,6 +472,25 @@ li {
 .task-detail-p {
   font-weight: 500;
   font-size: smaller;
+}
+.sub-task-child {
+  border: 1px solid #e95420;
+  height: 15px;
+  width: 15px;
+  margin: 4px 8px 0px 0px;
+}
+.sub-task-child:checked {
+  background-color: #e95420!important;
+}
+.subtask-detail-p {
+  font-weight: 500;
+  font-size: smaller;
+  border-bottom: 1px solid#000;
+  width: max-content;
+}
+.subtask-detail-p:hover {
+  color: #08aeea;
+  border-bottom: 1px solid#08aeea;
 }
 .dropdown-sec {
   border: 1px solid #000;
@@ -1014,6 +1045,43 @@ input[type="checkbox"]:enabled:checked {
  width: 100%;
  display: flex;
 }
+/* postion fix css start */
+.topPostion-fix {
+  position: fixed;
+  top: 76px;
+  background-color: #fff;
+  z-index: 9999;
+  width: 100%;
+}
+.topNav-fix {
+  position: fixed;
+  background-color: #fff;
+  z-index: 9999;
+  width: 84%;
+  top: 50px;
+}
+.topNav-fix1 {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background-color: #ffff;
+  top: 0;
+}
+.topNav-fix2 {
+  position: fixed;
+  width: 100%;
+  background-color: #ffff;
+  top: 156px;
+  z-index: 9999;
+  padding-top: 10px;
+  margin-left: -7px;
+}
+.scroll-end {
+  height: 58vh;
+  overflow-x: scroll;
+  margin-top: 60px;
+}
+/* postion fix css start */
 /* Media query for mobile */
 @media (max-width:767px) {
   .main-div {

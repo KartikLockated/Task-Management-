@@ -30,7 +30,7 @@
 <body>
     <!-- Navigation Top -->
     <nav class="navbar navbar-expand-lg navbar-light p-0">
-        <div class="container-fluid">
+        <div class="container-fluid topNav-fix1">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -79,7 +79,7 @@
     <!-- top navigation above -->
 
     <!-- sidebar start below -->
-    <div class="sidebar sidebar_inner" id="mySidebar">
+    <div class="sidebar sidebar_inner sidebar-k" id="mySidebar">
         <p class="closebtn">
             <span class="material-symbols-outlined cancel" onclick="closeNav()">
                 cancel
@@ -186,7 +186,7 @@
     <div class="website-content">
         <!-- module top navigation  -->
         <div class="module-data-section mt-2 mb-3">
-            <div class="container-sm d-flex justify-content-between pe-4 list-top">
+            <div class="container-sm d-flex justify-content-between pe-4 list-top topNav-fix">
                 <p class="topflex-p">Project</p>
                 <p class="topflex-p" id="topflex-p-child">Maintainance</p>
                 <p class="topflex-p">Finance</p>
@@ -196,7 +196,7 @@
                 <p class="topflex-p">Experience</p>
                 <p class="topflex-p">Property</p>
             </div>
-            <div class="ms-1">
+            <div class="ms-1 topPostion-fix">
                 <div class="p-1">
                       <div class="d-flex"><span class="pe-2"><img src="img/Globe.svg" alt=""></span>
                         <div class="dropdown">
@@ -223,7 +223,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between pe-4 p-2 pt-2 border-bottom">
-                <div class="d-flex">
+                <div class="d-flex topNav-fix2">
                     <!-- <h5 class="me-2 mt-2">Tasks</h5> -->
                     <div class="me-2"> <a href="my_calendar.html"><button type="button" class=" go-shadow-k"
                                 id="my-calander"><span class="pe-2"><img src="img/mycalOrg.svg" style="margin-bottom: 3px;"
@@ -247,9 +247,13 @@
             </div>
         </div>
         <!-- cards start -->
-        <div class="d-flex card-main ">
+        <div class="d-flex card-main scroll-end">
+            <div>
+                
+            </div>
             <div class="me-3 mb-3 go-shadow-k overflow-y-auto" style=" height: 700px;">
                 <div class="card border-0" style="width: 16rem;">
+                    <div>
                     <div class="card-body p-2 card-top">
                         <div class="d-flex card-top-child1">
                             <p class="pe-3 ps-2 text-dark">0</p>
@@ -263,6 +267,7 @@
                     <div class="card-body" >
                         <p class="card-text card-text-k">Drag an existing Task and drop it <br> under this category</p>
                     </div>
+                </div>
                 </div>
             </div>
 
